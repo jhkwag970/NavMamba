@@ -6,3 +6,4 @@ einops==0.8.1
 transformers==4.50.0
 Pillow==11.1.0
 requests==2.32.3
+pyproj==3.7.2
