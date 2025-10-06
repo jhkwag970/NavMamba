@@ -17,7 +17,7 @@ from tensorboardX import SummaryWriter
 # 1. Argument Parser
 # ------------------------------------------------------------
 def get_args():
-    parser = argparse.ArgumentParser(description="Train GPS-INS Transformer/LSTM on KITTI OXTS")
+    parser = argparse.ArgumentParser(description="Train GPS-INS Mamba/Transformer/LSTM on KITTI OXTS")
 
     # data
     parser.add_argument("--root", type=str, required=True,
@@ -28,7 +28,7 @@ def get_args():
     parser.add_argument("--num_workers", type=int, default=4)
 
     # model
-    parser.add_argument("--model", type=str, choices=["NavTR", "NavMamba", "NavLSTM"], default="NavTR")
+    parser.add_argument("--model", type=str, choices=["NavMamba", "NavTR", "NavLSTM"], default="NavMamba")
     parser.add_argument("--hidden_dim", type=int, default=64)
     parser.add_argument("--nhead", type=int, default=4)
     parser.add_argument("--mlp_ratio", type=float, default=2.0)
